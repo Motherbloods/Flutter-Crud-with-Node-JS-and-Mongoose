@@ -139,14 +139,6 @@ class _CreateProductPageState extends State<CreateProductPage> {
       decoration: InputDecoration(
         labelText: "No Barcode Produk",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        labelStyle: TextStyle(fontSize: 20.0),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          borderSide: BorderSide(
-            color: Colors.blue,
-            width: 2.0,
-          ),
-        ),
       ),
       controller: _codeOfProductTextboxController,
       onSaved: (value) {

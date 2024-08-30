@@ -81,11 +81,6 @@ class _ProductListPageState extends State<ProductListPage> {
     }
   }
 
-  Future<void> _getEditPage(String id) async {
-    String url = 'http://192.168.56.1:8000/api/edit/product/$id';
-    final response = await http.get(Uri.parse(url));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,10 +128,10 @@ class _ProductListPageState extends State<ProductListPage> {
                           'Nama Produk: ${snapshot.data[index].nameOfProduct ?? ''}',
                         ),
                         Text(
-                          'Harga Produk: Rp. ${snapshot.data[index].priceOfProduct.toString() ?? ''}',
+                          'Harga Produk: Rp. ${snapshot.data[index].priceOfProduct.toString()}',
                         ),
                         Text(
-                          'Stok Produk: ${snapshot.data[index].stockOfProduct.toString() ?? ''}',
+                          'Stok Produk: ${snapshot.data[index].stockOfProduct.toString()}',
                         ),
                         Text(
                           'Pabrikan: ${snapshot.data[index].pabrikanOfProduct ?? ''}',

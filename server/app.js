@@ -84,10 +84,6 @@ app.delete("/api/delete/product/:id", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
-app.get("/api/edit/product/:id", async (req, res) => {
-  const product = req.params.id;
-  console.log("ini produ", product);
-});
 app.put("/api/edit/product/:id", async (req, res) => {
   const productId = req.params.id;
   const updatedProduct = req.body;
